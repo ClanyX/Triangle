@@ -22,16 +22,29 @@ namespace Triangle
             Environment.Exit(0);
         }
 
-        private void form_Load(object sender, EventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            int panelWidth = (int)(this.ClientSize.Width * 0.9);
-            int panelHeight = (int)(this.ClientSize.Height * 0.9);
-            panel.Size = new Size(panelWidth, panelHeight);
+            base.OnPaint(e);
 
-            panel.Location = new Point(
-                (this.ClientSize.Width - panelWidth) / 2,
-                ((this.ClientSize.Height - panelHeight) / 2) + 12
-            );
+            Graphics g = e.Graphics;
+
+            PointF point1 = new PointF((this.Size.Width / 2), (this.Size.Height / 2) - 150.0f);
+            PointF point2 = new PointF((this.Size.Width / 2) + 150.0f, (this.Size.Height / 2) + 150.0f);
+            PointF point3 = new PointF((this.Size.Width / 2) - 150.0f, (this.Size.Height / 2) + 150.0f);
+
+            using (Pen outlinePen = new Pen(Color.Black, 5))
+            {
+                g.DrawLine(outlinePen, point1, point2);
+                g.DrawLine(outlinePen, point2, point3);
+                g.DrawLine(outlinePen, point3, point1);
+            }
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            a.Value = 0;
+            b.Value = 0;
+            c.Value = 0;
         }
     }
 }
