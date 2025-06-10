@@ -12,16 +12,13 @@ namespace Triangle
 {
     public partial class form : Form
     {
+        //Constructor
         public form()
         {
             InitializeComponent();
         }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
+        
+        //Functions
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -38,6 +35,12 @@ namespace Triangle
                 g.DrawLine(outlinePen, point2, point3);
                 g.DrawLine(outlinePen, point3, point1);
             }
+        }
+
+        //Operations
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
