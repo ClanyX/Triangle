@@ -37,6 +37,13 @@ namespace Triangle
             }
         }
 
+        private void Generate(object sender, EventArgs e)
+        {
+            La.Text = a.Value.ToString();
+            Lb.Text = b.Value.ToString();
+            Lc.Text = c.Value.ToString();
+        }
+
         //Operations
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,6 +55,7 @@ namespace Triangle
             a.Value = 0;
             b.Value = 0;
             c.Value = 0;
+            Generate(sender, e);
         }
     }
 }
