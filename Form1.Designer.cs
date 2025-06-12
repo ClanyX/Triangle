@@ -48,6 +48,8 @@
             this.La = new System.Windows.Forms.Label();
             this.Lb = new System.Windows.Forms.Label();
             this.Lc = new System.Windows.Forms.Label();
+            this.perimetr = new System.Windows.Forms.Label();
+            this.area = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.a)).BeginInit();
             this.panel1.SuspendLayout();
@@ -80,19 +82,19 @@
             // generateToolStripMenuItem
             // 
             this.generateToolStripMenuItem.Name = "generateToolStripMenuItem";
-            this.generateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.generateToolStripMenuItem.Text = "Generate";
             this.generateToolStripMenuItem.Click += new System.EventHandler(this.Generate);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(118, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -107,7 +109,7 @@
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -249,11 +251,33 @@
             this.Lc.TabIndex = 5;
             this.Lc.Text = "0";
             // 
+            // perimetr
+            // 
+            this.perimetr.AutoSize = true;
+            this.perimetr.Font = new System.Drawing.Font("Roboto Cn", 20.25F);
+            this.perimetr.Location = new System.Drawing.Point(739, 143);
+            this.perimetr.Name = "perimetr";
+            this.perimetr.Size = new System.Drawing.Size(69, 33);
+            this.perimetr.TabIndex = 6;
+            this.perimetr.Text = "P = 0";
+            // 
+            // area
+            // 
+            this.area.AutoSize = true;
+            this.area.Font = new System.Drawing.Font("Roboto Cn", 20.25F);
+            this.area.Location = new System.Drawing.Point(739, 182);
+            this.area.Name = "area";
+            this.area.Size = new System.Drawing.Size(69, 33);
+            this.area.TabIndex = 6;
+            this.area.Text = "A = 0";
+            // 
             // form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.area);
+            this.Controls.Add(this.perimetr);
             this.Controls.Add(this.Lb);
             this.Controls.Add(this.Lc);
             this.Controls.Add(this.La);
@@ -299,6 +323,8 @@
         private System.Windows.Forms.Label Lb;
         private System.Windows.Forms.ToolStripMenuItem generateToolStripMenuItem;
         private System.Windows.Forms.Label Lc;
+        private System.Windows.Forms.Label perimetr;
+        private System.Windows.Forms.Label area;
     }
 }
 

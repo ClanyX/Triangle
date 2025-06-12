@@ -38,10 +38,19 @@ namespace Triangle
         }
 
         private void Generate(object sender, EventArgs e)
-        {
+        { 
             La.Text = a.Value.ToString();
             Lb.Text = b.Value.ToString();
             Lc.Text = c.Value.ToString();
+
+            int perimetrN = 0;
+            double areaN = 0.00f;
+
+            perimetrN = (int)(a.Value + b.Value + c.Value);
+            perimetr.Text = $"P = {perimetrN}";
+
+            areaN = (0.5 * (double)c.Value * (2 * ((double)a.Value/(double)b.Value)));
+            area.Text = $"A = {areaN:F2}";
         }
 
         //Operations
@@ -56,6 +65,8 @@ namespace Triangle
             b.Value = 0;
             c.Value = 0;
             Generate(sender, e);
+            perimetr.Text = "P = 0";
+            area.Text = "A = 0";
         }
     }
 }
