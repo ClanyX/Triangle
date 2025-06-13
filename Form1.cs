@@ -38,19 +38,40 @@ namespace Triangle
         }
 
         private void Generate(object sender, EventArgs e)
-        { 
+        {
+            if (a.Value == 0 || b.Value == 0 || c.Value == 0)
+            {
+                MessageBox.Show("The sides cannot be negative.", "Generate ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (a.Value + b.Value < c.Value || a.Value + c.Value < b.Value || b.Value + c.Value < a.Value)
+            {
+                MessageBox.Show("Sum of two sides is lower than the thirt side!", "Generate ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             La.Text = a.Value.ToString();
             Lb.Text = b.Value.ToString();
             Lc.Text = c.Value.ToString();
 
             int perimetrN = 0;
-            double areaN = 0.00f;
+            float areaN = 0.00f;
 
             perimetrN = (int)(a.Value + b.Value + c.Value);
             perimetr.Text = $"P = {perimetrN}";
 
-            areaN = (0.5 * (double)c.Value * (2 * ((double)a.Value/(double)b.Value)));
+            areaN = (float)(a.Value + b.Value + c.Value) / 2.00f;
+            areaN = (float)Math.Sqrt(areaN * (areaN - (float)a.Value) * (areaN - (float)b.Value) * (areaN - (float)c.Value));
+            
             area.Text = $"A = {areaN:F2}";
+
+            if(c.Value == b.Value && b.Value == a.Value && c.Value == a.Value)
+            {
+                type.Text = "Isosceles";
+                MessageBox.Show("The triangle is isosceles.");
+                return;
+            }
         }
 
         //Operations
@@ -64,9 +85,12 @@ namespace Triangle
             a.Value = 0;
             b.Value = 0;
             c.Value = 0;
-            Generate(sender, e);
+            La.Text = a.Value.ToString();
+            Lb.Text = b.Value.ToString();
+            Lc.Text = c.Value.ToString();
             perimetr.Text = "P = 0";
             area.Text = "A = 0";
+            type.Text = "Type";
         }
     }
 }

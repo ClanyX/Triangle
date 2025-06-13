@@ -50,6 +50,7 @@
             this.Lc = new System.Windows.Forms.Label();
             this.perimetr = new System.Windows.Forms.Label();
             this.area = new System.Windows.Forms.Label();
+            this.type = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.a)).BeginInit();
             this.panel1.SuspendLayout();
@@ -271,11 +272,22 @@
             this.area.TabIndex = 6;
             this.area.Text = "A = 0";
             // 
+            // type
+            // 
+            this.type.Font = new System.Drawing.Font("Roboto Cn", 20.25F);
+            this.type.Location = new System.Drawing.Point(647, 227);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(250, 33);
+            this.type.TabIndex = 7;
+            this.type.Text = "Type";
+            this.type.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.type);
             this.Controls.Add(this.area);
             this.Controls.Add(this.perimetr);
             this.Controls.Add(this.Lb);
@@ -325,6 +337,7 @@
         private System.Windows.Forms.Label Lc;
         private System.Windows.Forms.Label perimetr;
         private System.Windows.Forms.Label area;
+        private System.Windows.Forms.Label type;
     }
 }
 
