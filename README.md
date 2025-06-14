@@ -8,79 +8,83 @@ A console application written in C#/.NET that:
 
 ---
 
-## 📦 Instalace
+## 📦 Installation
 
-1. Klonuj repozitář:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/ClanyX/Triangle.git
    cd Triangle
    ```
-2. Otevři řešení v Visual Studio nebo pomocí CLI (.NET SDK):
+2. Open the solution in Visual Studio or use the CLI (.NET SDK):
 
    ```bash
    dotnet build
    ```
 
-> **Poznámka:** Projekt je v C#, pravděpodobně založený na .NET (`net6.0`, `.NET Framework` apod.). Uprav podle verze ve tvém `.csproj`.
+> **Note:** This project is written in C# and likely targets .NET (`net6.0`, `.NET Framework`, etc.). Adjust based on the version in your `.csproj` file.
 
 ---
 
-## 🚀 Jak používat
+## 🚀 How to Use
 
-Spusť aplikaci (např. přes terminál):
+Run the application (e.g., via terminal):
 
 ```bash
 dotnet run --project Triangle
 ```
 
-Poté následuj instrukce v konzoli:
+Then follow the console instructions:
 
-1. Zadej délky tří stran (např. `3 4 5`)
-2. Aplikace ověří, zda lze trojúhelník tvořit, pokud ano:
+1. Enter the lengths of the three sides (e.g., `3 4 5`)
+2. The app will validate if a triangle can be formed, and if so:
 
-   * Vypíše typ trojúhelníku
-   * Vypočítá a zobrazí obvod
-   * Vypočítá a zobrazí obsah
+   * It prints the triangle type
+   * Calculates and displays the perimeter
+   * Calculates and displays the area
 
 ---
 
-## 🧪 Příklady
+## 🧪 Examples
 
 ```text
-Zadej délky stran: 3 4 5
-→ Trojúhelník je: Scalene
-→ Obvod: 12
-→ Obsah: 6
+Enter side lengths: 3 4 5
+→ Triangle type: Scalene
+→ Perimeter: 12
+→ Area: 6
 ```
 
 ```text
-Zadej délky stran: 5 5 5
-→ Trojúhelník je: Equilateral
-→ Obvod: 15
-→ Obsah: 10.825...
+Enter side lengths: 5 5 5
+→ Triangle type: Equilateral
+→ Perimeter: 15
+→ Area: 10.825...
 ```
 
 ---
 
-## 🛠️ Vnitřní struktura
+## 🛠️ Internal Structure
 
-* `Program.cs` – hlavní logika, vstup‑výstup + výpočet
-* `Triangle.cs` – (doplnit) třída pro ověřování a výpočet trojúhelníků
-* (v případě dalších souborů přidej stručný popis)
-
----
-
-## 📫 Příspěvky
-
-1. Forkni tento repozitář
-2. Vytvoř větev (`git checkout -b feature/nazev`)
-3. Proveď změny a commitni (`git commit -am 'Přidán nový příkaz'`)
-4. Pošli pull request
+* `Form1.cs` – main logic, input/output, and calculations
+* `Triangle` – class for triangle validation and computations
+* (add brief description of any other files if needed)
 
 ---
 
-## 📄 Licence
+## 📫 Contributions
 
-Tento projekt je zveřejněn bez licence – můžeš ho používat a modifikovat, ale autor neručí za žádné chyby.
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/your-feature-name`)
+3. Make your changes and commit (`git commit -am 'Add new feature'`)
+4. Submit a pull request
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 👤 Author
+
+Created with 💻 by [ClanyX](https://github.com/ClanyX)
 """
