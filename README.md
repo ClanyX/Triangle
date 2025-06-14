@@ -1,5 +1,3 @@
-readme\_content = """\\
-
 # Triangle
 
 A console application written in C#/.NET that:
