@@ -87,4 +87,3 @@ This project is licensed under the [MIT License](LICENCE).
 ## 👤 Author
 
 Created with 💻 by [ClanyX](https://github.com/ClanyX)
-"""
