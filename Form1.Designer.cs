@@ -275,9 +275,9 @@
             // type
             // 
             this.type.Font = new System.Drawing.Font("Roboto Cn", 20.25F);
-            this.type.Location = new System.Drawing.Point(647, 227);
+            this.type.Location = new System.Drawing.Point(672, 227);
             this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(250, 33);
+            this.type.Size = new System.Drawing.Size(225, 33);
             this.type.TabIndex = 7;
             this.type.Text = "Type";
             this.type.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

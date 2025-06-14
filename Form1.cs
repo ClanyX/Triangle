@@ -68,10 +68,30 @@ namespace Triangle
 
             if(c.Value == b.Value && b.Value == a.Value && c.Value == a.Value)
             {
-                type.Text = "Isosceles";
-                MessageBox.Show("The triangle is isosceles.");
+                type.Text = "Equilateral ";
+                MessageBox.Show("The triangle is equilateral.");
                 return;
             }
+
+            float aVal = (float)a.Value;
+            float bVal = (float)b.Value;
+            float cVal = (float)c.Value;
+
+            bool isRight =
+                Math.Abs(aVal * aVal + bVal * bVal - cVal * cVal) < 0.001f ||
+                Math.Abs(aVal * aVal + cVal * cVal - bVal * bVal) < 0.001f ||
+                Math.Abs(bVal * bVal + cVal * cVal - aVal * aVal) < 0.001f;
+
+            string right = isRight ? " and right" : "";
+
+            if (a.Value == b.Value || c.Value == b.Value || a.Value == c.Value)
+            {
+                type.Text = "Isosceles";
+                MessageBox.Show($"The triangle is isosceles{right}.");
+                return;
+            }
+
+            type.Text = $"Scalene{right}";
         }
 
         //Operations
